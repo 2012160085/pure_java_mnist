@@ -28,7 +28,7 @@ public class MnistData {
 		loadLabelData("train-labels-idx1-ubyte", "train");
 	}
 
-	// µ¥ÀÌÅÍ ÆÄÀÏ ÀĞ¾î¿À´Â ¸Ş¼Òµå
+	// ë°ì´í„° íŒŒì¼ ì½ì–´ì˜¤ëŠ” ë©”ì†Œë“œ
 	public void loadImageData(String fileName, String type) {
 		byte[] header = new byte[16];
 		byte[] buffer = new byte[784];

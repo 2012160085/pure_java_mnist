@@ -25,7 +25,7 @@ public class Model {
 	private Matrix diffMatrix;
 
 	public Model(int inputSize, int h1Size, int h2Size) {
-		// ·¹ÀÌ¾î ÃÊ±âÈ­
+		// ë ˆì´ì–´ ì´ˆê¸°í™”
 		inputLayer = new Matrix(inputSize, 784);
 		hiddenLayer1 = new Matrix(inputSize, h1Size);
 		hiddenLayer2 = new Matrix(inputSize, h2Size);
@@ -36,7 +36,7 @@ public class Model {
 		hidden2WeightedSum = new Matrix(inputSize, h2Size);
 		outputWeightedSum = new Matrix(inputSize, 10);
 
-		// °¡ÁßÄ¡ ÆíÇâ ÃÊ±âÈ­
+		// ê°€ì¤‘ì¹˜ í¸í–¥ ì´ˆê¸°í™”
 		weightsInput = new Matrix(784, h1Size);
 		weightsHidden1 = new Matrix(h1Size, h2Size);
 		weightsHidden2 = new Matrix(h2Size, 10);
@@ -58,7 +58,7 @@ public class Model {
 		this.inputLayer = inputLayer.clone();
 		this.labelMatrix = labelLayer.clone();
 
-		// ¾Æ¿ôÇ² °è»ê
+		// ì•„ì›ƒí’‹ ê³„ì‚°
 		inputWeightedSum = inputLayer.clone().product(weightsInput).add(biasInput);
 
 		hiddenLayer1 = inputWeightedSum.clone().sigmoid();
@@ -68,7 +68,7 @@ public class Model {
 
 		hidden2WeightedSum = hiddenLayer2.clone().product(weightsHidden2).add(biasHidden2);
 		outputLayer = hidden2WeightedSum.clone().sigmoid();
-		// loss °è»ê
+		// loss ê³„ì‚°
 		diffMatrix = outputLayer.clone(); // 1/10*(L-O)
 		diffMatrix = diffMatrix.sub(labelLayer);
 

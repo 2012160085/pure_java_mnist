@@ -4,7 +4,7 @@ MNIST Handwriting recognition implemented in pure Java
 This is tutorial project of deep learning
 
 
-# Java class
+## Module description
   
 * Matrix.java : Handles matrix calculation. It's basically 2d-double array 
 * Vector.java : Handles vector calculation. It's basically 1d-double array 
